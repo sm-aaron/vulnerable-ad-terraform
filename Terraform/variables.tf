@@ -13,7 +13,6 @@ variable "resource_group_vnet_name" {
 variable "domain-name" {
   type        = string
   description = "Domain name of the labs."
-  default     = "marvel"
 }
 
 variable "domain-name-dns" {
@@ -48,13 +47,12 @@ variable "workstation-hostname" {
 variable "kali-hostname" {
   type        = string
   description = "Name of the attacking machine."
-  default     = "domination"
+  default     = "pentest"
 }
 
 variable "kali-username" {
   type        = string
   description = "Account on the attacking machine used to access the infrasucture."
-  default     = "thanos"
 }
 
 variable "windows-user" {
@@ -66,25 +64,25 @@ variable "windows-user" {
 variable "region" {
   type        = string
   description = "Location of Azure infrastructure."
-  default     = "westeurope"
+  default     = "westus3"
 }
 
 variable "dc-size" {
   type        = string
   description = "The machine size of the Windows Server 2019 DC VM."
-  default     = "Standard_B2ms"
+  default     = "Standard_B1ms"
 }
 
 variable "workstation-size" {
   type        = string
   description = "The machine size of the Windows 10 VM."
-  default     = "Standard_B2ms"
+  default     = "Standard_B1ms"
 }
 
 variable "kali-size" {
   type        = string
   description = "The machine size of the jumpbox VM."
-  default     = "Standard_B2ms"
+  default     = "Standard_B1ms"
 }
 
 locals {

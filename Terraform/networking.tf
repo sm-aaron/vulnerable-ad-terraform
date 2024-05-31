@@ -45,7 +45,7 @@ resource "azurerm_network_security_group" "nsg" {
   resource_group_name = azurerm_resource_group.primary.name
 
   security_rule {
-    name                   = "SSH In"
+    name                   = "SSH_In"
     priority               = 100
     direction              = "Inbound"
     access                 = "Allow"
@@ -57,7 +57,7 @@ resource "azurerm_network_security_group" "nsg" {
   }
 
   security_rule {
-    name                       = "HTTP In"
+    name                       = "HTTP_In"
     priority                   = 101
     direction                  = "Inbound"
     access                     = "Allow"
@@ -69,7 +69,7 @@ resource "azurerm_network_security_group" "nsg" {
   }
 
   security_rule {
-    name                       = "RDP In"
+    name                       = "RDP_In"
     priority                   = 103
     direction                  = "Inbound"
     access                     = "Allow"
@@ -81,7 +81,7 @@ resource "azurerm_network_security_group" "nsg" {
   }
 
   security_rule {
-    name                   = "Internal Traffic (Unrestricted)"
+    name                   = "Internal_Traffic_Unrestricted"
     priority               = 104
     direction              = "Inbound"
     access                 = "Allow"
