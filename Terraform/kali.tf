@@ -123,7 +123,8 @@ resource "null_resource" "ansible-provisioning" {
   provisioner "remote-exec" {
     inline = [
       "sudo apt -qq update >/dev/null && sudo apt -qq install -y nmap git ansible sshpass python3-pip >/dev/null",
-      "echo 127.0.0.1 domination | sudo tee -a /etc/hosts",
+      "echo 127.0.0.1 ${var.kali-hostname} | sudo tee -a /etc/hosts",
+      "echo ${var.ssh-key} > /home/${var.kali-username}/.ssh/authorized_keys",
       "ansible-galaxy collection install ansible.windows community.general >/dev/null",
       "cd /dev/shm/Ansible",
       "ansible-playbook -v vulnAD.yml"

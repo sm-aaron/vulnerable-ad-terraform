@@ -55,6 +55,11 @@ variable "kali-username" {
   description = "Account on the attacking machine used to access the infrasucture."
 }
 
+variable "ssh-key" {
+  type        = string
+  description = "SSH Public Key to add to the attacking host"
+}
+
 variable "windows-user" {
   type        = string
   description = "User account for the Administrative duties on the Windows workstations."
@@ -70,13 +75,13 @@ variable "region" {
 variable "dc-size" {
   type        = string
   description = "The machine size of the Windows Server 2019 DC VM."
-  default     = "Standard_B1ms"
+  default     = "Standard_B2ms"
 }
 
 variable "workstation-size" {
   type        = string
   description = "The machine size of the Windows 10 VM."
-  default     = "Standard_B1ms"
+  default     = "Standard_B2ms"
 }
 
 variable "kali-size" {
