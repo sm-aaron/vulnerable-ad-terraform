@@ -87,7 +87,7 @@ variable "workstation-size" {
 variable "kali-size" {
   type        = string
   description = "The machine size of the jumpbox VM."
-  default     = "Standard_B1ms"
+  default     = "Standard_B2ms"
 }
 
 locals {
