@@ -75,19 +75,19 @@ variable "region" {
 variable "dc-size" {
   type        = string
   description = "The machine size of the Windows Server 2019 DC VM."
-  default     = "Standard_B2ms"
+  default     = "Standard_B1ms"
 }
 
 variable "workstation-size" {
   type        = string
   description = "The machine size of the Windows 10 VM."
-  default     = "Standard_B2ms"
+  default     = "Standard_B1ms"
 }
 
 variable "kali-size" {
   type        = string
   description = "The machine size of the jumpbox VM."
-  default     = "Standard_B2ms"
+  default     = "Standard_B1ms"
 }
 
 locals {
